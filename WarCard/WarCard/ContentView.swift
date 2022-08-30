@@ -8,6 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    
+    @State private var playerCard = "card5"
+    @State private var cpuCard = "card9"
+    @State private var playerScore = 0
+    @State private var cpuScore = 0
+    
+    
     var body: some View {
         ZStack {
             Image("background").ignoresSafeArea()
@@ -18,14 +26,38 @@ struct ContentView: View {
                 Spacer()
                 HStack{
                     Spacer()
-                    Image("card3")
+                    Image(playerCard)
                     Spacer()
-                    Image("card4")
+                    Image(cpuCard)
                     Spacer()
                 }
                 
                 Spacer()
-                Image("dealbutton")
+                
+                Button {
+                    //Generate a Random number between 2 and 14
+                    
+                    let playerRand = Int.random(in: 2...14)
+                    let cpuRand = Int.random(in: 2...14)
+                    
+                   //Update the cards
+                    playerCard = "card" + String(playerRand)
+                    cpuCard = "card" + String(cpuRand)
+                    
+                   //Update the score
+                    if playerRand > cpuRand{
+                        playerScore += 1
+                    }else if cpuRand > playerRand{
+                        cpuScore += 1
+                    }
+                    
+                    
+                    
+                } label: {
+                    Image("dealbutton")
+                }
+
+                
                 
                 Spacer()
                 
@@ -33,12 +65,12 @@ struct ContentView: View {
                     Spacer()
                     VStack(alignment: .center, spacing: 10.0) {
                         Text("Player").font(.headline).foregroundColor(Color.white)
-                        Text("0").font(.largeTitle).foregroundColor(Color.white)
+                        Text(String(playerScore)).font(.largeTitle).foregroundColor(Color.white)
                     }
                     Spacer()
                     VStack(alignment: .center, spacing: 10.0) {
                         Text("CPU").font(.headline).foregroundColor(Color.white)
-                        Text("0").font(.largeTitle).foregroundColor(Color.white)
+                        Text(String(cpuScore)).font(.largeTitle).foregroundColor(Color.white)
                     }
                     Spacer()
                 }

@@ -8,9 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var model = RecipeModel()
+    //  @ObservedObject declares that the View is listening for ViewModel changes on that instance
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            List(model.recipes){ recipe in
+                HStack(alignment: .center){
+                    Text(recipe.name)
+                    Text(recipe.cuisine)
+                    
+                }
+            }
+            
+            Button {
+                model.addRecipe()
+            } label: {
+                Text("Add Recipe")
+            }
+
+
+        }
     }
 }
 

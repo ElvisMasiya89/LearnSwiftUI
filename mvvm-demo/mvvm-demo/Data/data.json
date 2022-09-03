@@ -1,0 +1,17 @@
+
+[
+    {
+      "name":"pizza",
+      "cuisine":"Italian"
+    },
+    
+    {
+      "name":"sadza",
+      "cuisine":"Zimbabwean"
+    },
+    
+    {
+      "name":"ziggy",
+      "cuisine":"Tanzanian"
+    }
+]

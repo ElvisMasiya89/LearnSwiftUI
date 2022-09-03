@@ -23,7 +23,7 @@ struct ContentView: View {
             }
             
             Button {
-                model.addRecipe()
+               model.addRecipe()
             } label: {
                 Text("Add Recipe")
             }

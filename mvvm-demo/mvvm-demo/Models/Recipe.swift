@@ -7,8 +7,15 @@
 
 import Foundation
 
-struct Recipe:Identifiable{
-    var id = UUID()
+class Recipe:Identifiable,Decodable{
+    var id:UUID?
     var name = ""
     var cuisine = ""
+    
+    init( _ name:String, _ cuisine:String){
+        self.name = name
+        self.cuisine = cuisine
+        self.id = UUID()
+        
+    }
 }

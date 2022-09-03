@@ -13,6 +13,7 @@
 		974769AE28C00F59001CC6D1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 974769AD28C00F59001CC6D1 /* Preview Assets.xcassets */; };
 		974769B828C0122A001CC6D1 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974769B728C0122A001CC6D1 /* Recipe.swift */; };
 		97BB3B4B28C13AA8005AECA5 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BB3B4A28C13AA8005AECA5 /* RecipeModel.swift */; };
+		97BB3B4E28C15C28005AECA5 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 97BB3B4D28C15C28005AECA5 /* data.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		974769AD28C00F59001CC6D1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		974769B728C0122A001CC6D1 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		97BB3B4A28C13AA8005AECA5 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
+		97BB3B4D28C15C28005AECA5 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				974769B628C010ED001CC6D1 /* ViewModel */,
 				974769B528C010E0001CC6D1 /* Models */,
 				974769B428C010D3001CC6D1 /* Views */,
+				97BB3B4C28C15B8E005AECA5 /* Data */,
 				974769AA28C00F59001CC6D1 /* Assets.xcassets */,
 				974769AC28C00F59001CC6D1 /* Preview Content */,
 			);
@@ -95,6 +98,14 @@
 				97BB3B4A28C13AA8005AECA5 /* RecipeModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		97BB3B4C28C15B8E005AECA5 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				97BB3B4D28C15C28005AECA5 /* data.json */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +168,7 @@
 			files = (
 				974769AE28C00F59001CC6D1 /* Preview Assets.xcassets in Resources */,
 				974769AB28C00F59001CC6D1 /* Assets.xcassets in Resources */,
+				97BB3B4E28C15C28005AECA5 /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,7 +25,7 @@ struct RecipeTabView: View {
                     }
                 }
           
-        }.environmentObject(RecipeModel())
+        }.environmentObject(RecipeModel())//Add the EnvironmentObject modifier to a parent view,for subviews to  get access to its data.
     }
 }
 

@@ -34,6 +34,11 @@ class DataService{
                 //Add the nique IDs
                 for recipe in recipeData{
                     recipe.id = UUID()
+                    
+                    //Add the nique IDs to ingredients of the recipe
+                    for ingredient in recipe.ingredients{
+                        ingredient.id = UUID()
+                    }
                 }
                 
                 //Return the recipes

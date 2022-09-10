@@ -22,7 +22,8 @@ struct RecipeFeaturedView: View {
             GeometryReader {geo in
                 
                 TabView{
-                    ForEach(0..<model.recipes.count){ index in
+                 
+                    ForEach(0..<model.recipes.count, id:\.self){ index in
                         //Only show those that should
                         
                         if model.recipes[index].featured == true{

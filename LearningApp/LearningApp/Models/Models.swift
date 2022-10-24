@@ -2,10 +2,8 @@
 //  Models.swift
 //  LearningApp
 //
-//  Created by Elvis Masiya on 2022/09/13.
+//  Created by Christopher Ching on 2021-03-04.
 //
-
-import Foundation
 
 import Foundation
 

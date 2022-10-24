@@ -14,7 +14,10 @@ struct ContentView: View {
 //    private var items: FetchedResults<Item>
     
                                                                                        
-    @FetchRequest(sortDescriptors: []) var people:FetchedResults<Person>
+    @FetchRequest(sortDescriptors: [
+        NSSortDescriptor(key:"age", ascending: true)],
+        predicate:NSPredicate(format: "name contains 'Joe'"))
+    var people:FetchedResults<Person>
     var body: some View {
         VStack {
             Button(action: addItem) {
@@ -26,12 +29,12 @@ struct ContentView: View {
                 ForEach(people){
                     person in
                      
-                    Text(person.name ?? "No Name").onTapGesture {
-//                        person.name = "Joe"  //Updating data in Core Data
-//                        try! viewContext.save()
-                        
-                        viewContext.delete(person)  //Deleting data in Core Data
+                    Text("\(person.name ?? "No Name")  age:\(person.age)").onTapGesture {
+                        person.name = "Joe"  //Updating data in Core Data
                         try! viewContext.save()
+                        
+//                        viewContext.delete(person)  //Deleting data in Core Data
+//                        try! viewContext.save()
                     }
                 }
             }
@@ -43,7 +46,7 @@ struct ContentView: View {
     //Creating Data In CoreData
     private func addItem() {
         let  p = Person(context: viewContext)
-        p.age = 20
+        p.age = Int64.random(in: 0...20)
         p.name = "Tom"
         
         do{
